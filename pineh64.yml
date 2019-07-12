@@ -123,6 +123,13 @@ actions:
       - git
       - python3
       - linux-firmware
+      - kmod
+
+  - action: run
+    chroot: true
+    description: Run depmod for extra module
+    label: depmod
+    command: depmod
 
   - action: overlay
     description: fix DNS inside container
