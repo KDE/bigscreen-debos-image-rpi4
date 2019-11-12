@@ -249,12 +249,16 @@ actions:
       - qml-module-qmltermwidget
 
   - action: apt
+    description: Python sip
+    packages:
+      - python3-sip-dev
+
+  - action: apt
     description: Python packages
     packages:
       - python-dev
       - libpython-dev
       - python-pyqt5
-      - python3-sip-dev
 
     # Mycroft packages
   - action: apt
