@@ -237,6 +237,25 @@ actions:
       - gstreamer1.0-fluendo-mp3
       - qml-module-qtmultimedia
 
+  - action: apt
+    description: Qt dependencies
+    packages:
+      - python3-dev
+      - libqt5webview5
+      - qml-module-qtquick-particles2
+      - libqt5designer5
+      - libqt5websockets5
+      - libqt5help5
+      - qml-module-qmltermwidget
+
+  - action: apt
+    description: Python packages
+    packages:
+      - python-dev
+      - libpython-dev
+      - python-pyqt5
+      - python3-sip-dev
+
     # Mycroft packages
   - action: apt
     description: Mycroft packages
