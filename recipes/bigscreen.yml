@@ -11,6 +11,7 @@ actions:
       - kio-extras
       - plasma-workspace-wallpapers
       - python3-pip
+      - plasma-settings
 
   - action: overlay
     description: Plasma for embedded systems specific overlay
