@@ -1,0 +1,20 @@
+{{- $architecture := or .architecture "arm64" -}}
+
+architecture: {{ $architecture }}
+
+actions:
+  - action: apt
+    description: Mycroft Big screen specific packages
+    packages:
+      - plasma-nano
+      - plasma-big-launcher
+      - kio-extras
+      - plasma-workspace-wallpapers
+
+  - action: overlay
+    description: Plasma for embedded systems specific overlay
+    source: ../overlays/base-embedded
+
+  - action: overlay
+    description: Mycroft Big screen specific overlay
+    source: ../overlays/bigscreen
