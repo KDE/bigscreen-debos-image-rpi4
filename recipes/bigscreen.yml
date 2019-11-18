@@ -10,6 +10,7 @@ actions:
       - plasma-big-launcher
       - kio-extras
       - plasma-workspace-wallpapers
+      - python3-pip
 
   - action: overlay
     description: Plasma for embedded systems specific overlay
