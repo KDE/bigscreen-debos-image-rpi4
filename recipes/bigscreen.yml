@@ -12,6 +12,7 @@ actions:
       - plasma-workspace-wallpapers
       - python3-pip
       - plasma-settings
+      - kde-config-mobile-networking
 
   - action: overlay
     description: Plasma for embedded systems specific overlay
