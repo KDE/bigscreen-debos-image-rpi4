@@ -8,6 +8,7 @@ actions:
     packages:
       - plasma-nano
       - plasma-big-launcher
+      - mycroft-skill-installer
       - kio-extras
       - plasma-workspace-wallpapers
       - python3-pip
