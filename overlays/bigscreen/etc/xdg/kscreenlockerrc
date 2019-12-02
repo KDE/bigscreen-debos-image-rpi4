@@ -1,0 +1,14 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Daemon]
+Timeout=50
+
+[Greeter]
+Theme=org.kde.breeze.desktop
+WallpaperPlugin=org.kde.plasma.mycroft.bigscreen
+
+
+[Greeter][Wallpaper][org.kde.slideshow][General]
+SlidePaths=/usr/share/wallpapers/
+
