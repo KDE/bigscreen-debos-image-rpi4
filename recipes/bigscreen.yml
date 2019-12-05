@@ -35,7 +35,7 @@ actions:
     chroot: true
     script: ../scripts/03-setup_cec.sh
 
-    - action: run
+  - action: run
     description: Setting up Skills
     chroot: true
     script: ../scripts/93-prepare-bigscreen-skills.sh
