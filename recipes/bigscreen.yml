@@ -15,7 +15,7 @@ actions:
       - plasma-settings
       - kde-config-mobile-networking
       - kwin-x11
-      - websocket-client
+      - python3-websocket
 
   - action: overlay
     description: Plasma for embedded systems specific overlay
