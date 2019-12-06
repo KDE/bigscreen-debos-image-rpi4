@@ -17,7 +17,7 @@ actions:
       - kwin-x11
       - python3-websocket
       - cec-utils
-      - python3-cec
+      - libcec-dev
       - raspi-userland
 
   - action: download

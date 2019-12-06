@@ -5,6 +5,7 @@ GROUP=uinput
 UGID=32011
 
 pip3 install python-uinput
+pip3 install cec
 
 groupadd ${GROUP}
 
