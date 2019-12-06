@@ -11,7 +11,7 @@ groupadd ${GROUP}
 
 usermod -a -G ${GROUP} ${USER}
 
-cp -r /etc/skel/.config/* /home/$USER/.config/
+cp -r /etc/skel/.config/autostart-scripts/cec-daemon.py /home/$USER/.config/autostart-scripts/
 
 chown -R $UGID:$UGID /opt/mycroft
 chown -R $UGID:$UGID /home/$USER
