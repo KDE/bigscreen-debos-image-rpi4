@@ -2,7 +2,7 @@ UGID=32011
 USER=mycroft
 
 # Unpack mycroft-skills-aarch64.tar.gz to user home
-tar -xzf /var/tmp/mycroft-skills-aarch64.tar.gz -C /home/$USER/
+tar -xzf /var/tmp/mycroft-skills-aarch64.tar.gz -C /
 rm /var/tmp/mycroft-skills-aarch64.tar.gz
 cp -r /etc/skel/.local/* /home/$USER/.local/
 

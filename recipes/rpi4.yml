@@ -79,11 +79,6 @@ actions:
     chroot: true
     command: cp -r /var/tmp/brcm/brcmfmac43455-sdio.* /lib/firmware/brcm/
 
-  - action: apt
-    description: Raspberry userland libraries
-    packages:
-    - raspi-userland
-
   - action: run
     description: Copy kernel to where bootloader expects it
     chroot: true

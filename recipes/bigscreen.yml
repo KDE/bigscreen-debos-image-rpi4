@@ -17,6 +17,7 @@ actions:
       - kwin-x11
       - python3-websocket
       - cec-utils
+      - raspi-userland
 
   - action: download
     url: https://notmart.org/misc/mycroft/mycroft-skills-aarch64.tar.gz
