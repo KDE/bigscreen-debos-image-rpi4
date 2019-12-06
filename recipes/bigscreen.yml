@@ -17,12 +17,18 @@ actions:
       - kwin-x11
       - python3-websocket
       - cec-utils
+      - python3-cec
       - raspi-userland
 
   - action: download
     url: https://notmart.org/misc/mycroft/mycroft-skills-aarch64.tar.gz
-    name: mycroft-core
+    name: mycroft-skills
     filename: mycroft-skills-aarch64.tar.gz
+
+  - action: overlay
+    origin: mycroft-skills
+    source: .
+    destination: /var/tmp/mycroft-skills-aarch64.tar.gz
 
   - action: overlay
     description: Plasma for embedded systems specific overlay

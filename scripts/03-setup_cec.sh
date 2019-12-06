@@ -3,7 +3,7 @@
 USER=mycroft
 GROUP=uinput
 
-pip3 install cec python-uinput
+pip3 install python-uinput
 
 groupadd ${GROUP}
 
