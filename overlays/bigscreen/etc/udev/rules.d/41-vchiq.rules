@@ -1,0 +1,1 @@
+KERNEL=="vchiq", MODE="0666", GROUP="root", OWNER="root"

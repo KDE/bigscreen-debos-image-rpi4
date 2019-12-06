@@ -16,6 +16,7 @@ actions:
       - kde-config-mobile-networking
       - kwin-x11
       - python3-websocket
+      - cec-utils
 
   - action: download
     url: https://notmart.org/misc/mycroft/mycroft-skills-aarch64.tar.gz
