@@ -13,6 +13,8 @@ cp -r /etc/skel/.config/autostart-scripts/cec-daemon.py /home/$USER/.config/auto
 chown -R $UGID:$UGID /opt/mycroft
 chown -R $UGID:$UGID /home/$USER
 
+ldconfig
+
 pip3 install wheel
 pip3 install python-uinput
 pip3 install cec
