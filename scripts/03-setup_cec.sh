@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh -ex
 
 USER=mycroft
 GROUP=uinput
@@ -8,6 +8,7 @@ groupadd ${GROUP}
 
 usermod -a -G ${GROUP} ${USER}
 
+mkdir -p /home/$USER/.config/autostart-scripts/
 cp -r /etc/skel/.config/autostart-scripts/cec-daemon.py /home/$USER/.config/autostart-scripts/
 
 chown -R $UGID:$UGID /opt/mycroft
