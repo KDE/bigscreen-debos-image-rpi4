@@ -21,6 +21,7 @@ actions:
       - raspi-userland
       - falkon
       - firefox 
+      - pavucontrol
 
   - action: download
     url: https://notmart.org/misc/mycroft/mycroft-skills-aarch64.tar.gz
