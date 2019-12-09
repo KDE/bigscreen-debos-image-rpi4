@@ -19,6 +19,8 @@ actions:
       - cec-utils
       - libcec-dev
       - raspi-userland
+      - falkon
+      - firefox 
 
   - action: download
     url: https://notmart.org/misc/mycroft/mycroft-skills-aarch64.tar.gz
