@@ -31,10 +31,6 @@ actions:
     destination: /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
 
   - action: apt
-    description: Breeze icons
-      - breeze-icon-theme
-
-  - action: apt
     description: Mycroft runtime dependencies
     packages:
       - pcre2-utils
@@ -69,6 +65,7 @@ actions:
     packages:
       - mycroft-gui
       - qml-module-org-kde-lottie
+      - breeze-icon-theme
 
   - action: run
     description: Set up user account
