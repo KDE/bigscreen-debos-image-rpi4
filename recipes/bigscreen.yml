@@ -33,6 +33,16 @@ actions:
     source: .
     destination: /var/tmp/mycroft-skills-aarch64.tar.gz
 
+  - action: download
+    url: https://mycroft.blue-systems.com/dotmycroft-setup-aarch64.tar.gz
+    name: dotmycroft
+    filename: dotmycroft-setup-aarch64.tar.gz
+
+  - action: overlay
+    origin: dotmycroft
+    source: .
+    destination: /var/tmp/dotmycroft-setup-aarch64.tar.gz
+
   - action: overlay
     description: Plasma for embedded systems specific overlay
     source: ../overlays/base-embedded
