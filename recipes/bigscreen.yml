@@ -24,7 +24,7 @@ actions:
       - pavucontrol
 
   - action: download
-    url: https://notmart.org/misc/mycroft/mycroft-skills-aarch64.tar.gz
+    url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
     name: mycroft-skills
     filename: mycroft-skills-aarch64.tar.gz
 
