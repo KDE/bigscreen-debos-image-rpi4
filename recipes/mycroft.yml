@@ -65,7 +65,6 @@ actions:
     packages:
       - mycroft-gui
       - qml-module-org-kde-lottie
-      - breeze-icon-theme
 
   - action: run
     description: Set up user account
