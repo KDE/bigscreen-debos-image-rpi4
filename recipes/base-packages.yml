@@ -38,7 +38,8 @@ actions:
   - action: apt
     description: Plasma packages
     packages:
-      - plasma-workspace-wayland
+      - breeze-icon-theme
+      - kscreen
 
   - action: overlay
     description: fix DNS inside container
@@ -52,6 +53,7 @@ actions:
       - libkf5wallet-bin
       - breeze-icon-theme
       - kscreen
+      - plasma-workspace-wayland
 
   - action: overlay
     description: fix DNS inside container
