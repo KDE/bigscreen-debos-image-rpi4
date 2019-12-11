@@ -1,3 +1,5 @@
 [KDE]
 LookAndFeelPackage=org.kde.plasma.mycroft.bigscreen
 
+[Icons]
+Theme=breeze
