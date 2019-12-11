@@ -5,6 +5,7 @@ USER=mycroft
 tar -xzf /var/tmp/mycroft-skills-aarch64.tar.gz -C /
 rm /var/tmp/mycroft-skills-aarch64.tar.gz
 cp -r /etc/skel/.local/* /home/$USER/.local/
+cp -r /etc/xdg/kglobalshortcutsrc /home/$USER/.config/
 
 tar -xzf /var/tmp/dotmycroft-setup-aarch64.tar.gz -C /home/mycroft
 
