@@ -21,11 +21,9 @@ actions:
     packages:
       - xauth
       - sddm
-      - kwin-wayland
       - openssh-server
       - ftp
       - i2c-tools
-      - konsole
       - nano
       - i2c-tools
       - rng-tools5
@@ -53,6 +51,7 @@ actions:
       - libkf5wallet-bin
       - breeze-icon-theme
       - kscreen
+      - konsole
       - plasma-workspace-wayland
 
   - action: overlay
