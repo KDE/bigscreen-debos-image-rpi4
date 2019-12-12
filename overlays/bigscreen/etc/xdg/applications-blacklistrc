@@ -1,0 +1,3 @@
+[Applications]
+allapps=
+blacklist=ai.mycroft.gui-app,org.mycroft.skill.installer,org.kde.mobile.plasmasettings,pavucontrol,systemsettings
