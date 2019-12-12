@@ -67,6 +67,11 @@ actions:
     url: https://mycroft.blue-systems.com/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
     name: appimage-cli-tool
     filename: appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
+    
+  - action: overlay
+    origin: appimage-cli-tool
+    source: .
+    destination: /var/tmp/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
 
   - action: run
     description: Setting up Appimage CLI Tool
