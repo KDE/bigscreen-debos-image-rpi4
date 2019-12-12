@@ -20,8 +20,10 @@ actions:
       - libcec-dev
       - raspi-userland
       - falkon
-      - firefox 
+      - firefox
       - pavucontrol
+      - gltron
+      - gnome-chess
 
   - action: download
     url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
@@ -50,7 +52,7 @@ actions:
   - action: overlay
     description: Mycroft Big screen specific overlay
     source: ../overlays/bigscreen
-
+    
   - action: run
     description: Setting up CEC
     chroot: true
@@ -60,3 +62,13 @@ actions:
     description: Setting up Skills
     chroot: true
     script: ../scripts/93-prepare-bigscreen-skills.sh
+
+  - action: download
+    url: https://mycroft.blue-systems.com/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
+    name: appimage-cli-tool
+    filename: appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
+
+  - action: run
+    description: Setting up Appimage CLI Tool
+    chroot: true
+    script: ../scripts/95-prepare-appimage-cli-tool.sh
