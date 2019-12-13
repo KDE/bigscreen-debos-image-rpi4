@@ -73,4 +73,17 @@ actions:
       - gstreamer1.0-plugins-ugly
       - gstreamer1.0-fluendo-mp3
       - gstreamer1.0-libav
+      - gstreamer1.0-alsa
+      - gstreamer1.0-gl
+      - gstreamer1.0-omg-generic
+      - gstreamer1.0-x
+      - gstreamer1.0-vaapi
+      - gstreamer1.0-pocketsphinx
+      - gstreamer1.0-pipewire
       - libqt5multimedia5-plugins
+      - ffmpeg
+      - lame
+      - chromium-codecs-ffmpeg-extra
+      - libk3b7-extracodecs
+      - libavcodec-extra
+      - libavcodec-extra57

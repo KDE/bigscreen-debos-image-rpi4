@@ -5,7 +5,7 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Wikipedia
-Exec=mycroft-gui-app --hideTextInput --skill=mycroft-wiki.mycroftai
+Exec=mycroft-gui-app --hideTextInput --skill=mycroft-wiki.mycroftai.home
 Icon=kt-chunks
 Categories=VoiceApp
 StartupNotify=false

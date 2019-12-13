@@ -24,6 +24,7 @@ actions:
       - pavucontrol
       - gltron
       - gnome-chess
+      - dolphin
 
   - action: download
     url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
