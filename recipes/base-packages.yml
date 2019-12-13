@@ -37,7 +37,6 @@ actions:
     description: Plasma packages
     packages:
       - breeze-icon-theme
-      - kscreen
 
   - action: overlay
     description: fix DNS inside container
