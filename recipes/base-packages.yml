@@ -80,6 +80,8 @@ actions:
       - gstreamer1.0-vaapi
       - gstreamer1.0-pocketsphinx
       - gstreamer1.0-pipewire
+      - gstreamer1.0-pulseaudio
+      - gstreamer1.0-rtsp
       - libqt5multimedia5-plugins
       - ffmpeg
       - lame
@@ -87,3 +89,5 @@ actions:
       - libk3b7-extracodecs
       - libavcodec-extra
       - libavcodec-extra57
+      - ubuntu-restricted-extras
+      - kubuntu-restricted-extras
