@@ -6,7 +6,7 @@ disable_overscan=1
 
 # for sound over HDMI
 # hdmi_drive=2
-hdmi_ignore_cec_init=1
+hdmi_ignore_cec_init=0
 
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
