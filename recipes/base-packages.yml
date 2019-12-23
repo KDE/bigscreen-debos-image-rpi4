@@ -17,6 +17,13 @@ actions:
 
     # Desktop packages
   - action: apt
+    description: Plasma packages
+    packages:
+      - breeze-icon-theme
+      - humanity-icon-theme
+
+    # Desktop packages
+  - action: apt
     description: Base packages
     packages:
       - xauth
@@ -27,21 +34,6 @@ actions:
       - nano
       - i2c-tools
       - rng-tools5
-
-  - action: overlay
-    description: fix DNS inside container
-    source: ../overlays/resolv
-
-    # Desktop packages
-  - action: apt
-    description: Plasma packages
-    packages:
-      - breeze-icon-theme
-      - humanity-icon-theme
-
-  - action: overlay
-    description: fix DNS inside container
-    source: ../overlays/resolv
 
   - action: apt
     description: Plasma packages
