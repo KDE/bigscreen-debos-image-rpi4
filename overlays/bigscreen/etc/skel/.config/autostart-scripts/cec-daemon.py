@@ -12,6 +12,8 @@ KEYMAP = {
    2: u.KEY_DOWN,
    3: u.KEY_LEFT,
    4: u.KEY_RIGHT,
+   9: u.KEY_HOMEPAGE,
+  10: u.KEY_MENU,
   13: u.KEY_BACK,
   68: u.KEY_PLAY,
   69: u.KEY_STOP,
