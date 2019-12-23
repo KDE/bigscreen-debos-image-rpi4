@@ -23,7 +23,8 @@ actions:
       - firefox
       - pavucontrol
       - gltron
-      - gnome-chess
+      - extremetuxracer
+      - kate
       - dolphin
 
   - action: download
