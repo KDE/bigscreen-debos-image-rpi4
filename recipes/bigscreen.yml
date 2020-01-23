@@ -20,6 +20,7 @@ actions:
       - libcec-dev
       - raspi-userland
       - falkon
+      - aura-browser
       - firefox
       - pavucontrol
       - gltron
