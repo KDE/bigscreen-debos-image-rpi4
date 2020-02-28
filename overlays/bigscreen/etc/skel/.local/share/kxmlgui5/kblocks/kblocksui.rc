@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gui xmlns="http://www.kde.org/standards/kxmlgui/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="kblocks" version="8" xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0&#xa;                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
+ <MenuBar>
+  <Menu name="game">
+   <Action name="newGame"/>
+   <Action name="pve_step"/>
+   <Separator/>
+   <Action name="pauseGame"/>
+   <Separator/>
+   <Action name="showHighscores"/>
+   <Separator/>
+   <Action name="quit"/>
+  </Menu>
+  <Menu name="settings">
+   <Action name="sounds"/>
+  </Menu>
+ </MenuBar>
+ <ToolBar name="mainToolBar">
+  <text>Main Toolbar</text>
+  <Action name="newGame"/>
+  <Separator/>
+  <Action name="pauseGame"/>
+  <Action name="quit"/>
+ </ToolBar>
+ <ActionProperties scheme="Default">
+  <Action name="move_down" shortcut=""/>
+  <Action name="newGame" shortcut="Up"/>
+  <Action name="push_down" shortcut="Down"/>
+  <Action name="rotate_ccw" shortcut="Return"/>
+ </ActionProperties>
+</gui>
