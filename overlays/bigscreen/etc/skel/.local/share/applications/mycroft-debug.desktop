@@ -1,12 +1,8 @@
 [Desktop Entry]
 Categories=Utilities
-Path=/home/aix/mycroft-core
 Exec=konsole --workdir "/home/$USER/mycroft-core" --hold -e "bash start-mycroft.sh cli"
 Icon=debug-run
 Name=Mycroft Console
-StartupNotify=false
 Terminal=false
 Type=Application
 Version=1.0
-X-DBUS-StartupType=none
-X-KDE-StartupNotify=false
