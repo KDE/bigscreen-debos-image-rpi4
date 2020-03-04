@@ -16,3 +16,7 @@ actions:
     chroot: true
     command: echo "deb http://archive.xenon.pangea.pub/unstable bionic main" > /etc/apt/sources.list.d/xenon.list
 
+  - action: run
+    description: Pin xenon repo
+    chroot: true
+    script: ../scripts/pin-xenon-repo.sh
