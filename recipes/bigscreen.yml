@@ -7,7 +7,7 @@ actions:
     description: Mycroft Big screen specific packages
     packages:
       - plasma-nano
-      - plasma-big-launcher
+      - plasma-bigscreen
       - mycroft-skill-installer
       - kio-extras
       - plasma-workspace-wallpapers
