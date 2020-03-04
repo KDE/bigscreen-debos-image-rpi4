@@ -58,6 +58,8 @@ actions:
       - build-essential
       - pulseaudio
       - pulseaudio-utils
+      - libdbus-1-dev
+      - libdbus-glib-1-dev
 
     # Mycroft packages
   - action: apt
