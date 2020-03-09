@@ -23,9 +23,11 @@
   <Action name="quit"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action name="move_down" shortcut=""/>
-  <Action name="newGame" shortcut="Up"/>
-  <Action name="push_down" shortcut="Down"/>
-  <Action name="rotate_ccw" shortcut="Return"/>
+  <Action shortcut="" name="move_down"/>
+  <Action shortcut="Down" name="push_down"/>
+  <Action shortcut="Up; Media Previous" name="rotate_ccw"/>
+  <Action shortcut="Media Play" name="pauseGame"/>
+  <Action shortcut="Z; Media Next" name="rotate_cw"/>
+  <Action shortcut="Return" name="newGame"/>
  </ActionProperties>
 </gui>
