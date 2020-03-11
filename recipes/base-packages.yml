@@ -9,18 +9,13 @@ actions:
   - action: apt
     description: Basic packages
     packages:
+      - breeze-icon-theme
+      - humanity-icon-theme
       - bash-completion
       - vim
       - alsa-utils
       - git
       - python3
-
-    # Desktop packages
-  - action: apt
-    description: Plasma packages
-    packages:
-      - breeze-icon-theme
-      - humanity-icon-theme
 
     # Desktop packages
   - action: apt
