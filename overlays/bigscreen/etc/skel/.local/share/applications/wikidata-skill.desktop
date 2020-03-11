@@ -5,7 +5,7 @@ Comment=
 Exec=mycroft-gui-app --hideTextInput --skill=skill-wikidata.aiix.home
 GenericName[en_IN]=
 GenericName=
-Icon=kt-chunks
+Icon=wikidata-skill
 MimeType=
 Name[en_IN]=Wikidata
 Name=Wikidata
