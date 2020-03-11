@@ -28,6 +28,8 @@ actions:
       - extremetuxracer
       - kate
       - dolphin
+      - python3-dbus
+      - python3-pyqt5
 
   - action: download
     url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
@@ -81,3 +83,8 @@ actions:
     description: Setting up Appimage CLI Tool
     chroot: true
     script: ../scripts/95-prepare-appimage-cli-tool.sh
+
+  - action: run
+    description: Setting up AutoResolution Script
+    chroot: true
+    script: ../scripts/96-prepare-auto-resolution.sh
