@@ -30,6 +30,7 @@ actions:
       - dolphin
       - python3-dbus
       - python3-pyqt5
+      - unclutter
 
   - action: download
     url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
