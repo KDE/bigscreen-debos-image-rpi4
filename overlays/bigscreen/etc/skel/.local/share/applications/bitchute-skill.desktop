@@ -1,0 +1,11 @@
+[Desktop Entry]
+X-DBUS-StartupType=None
+X-KDE-StartupNotify=false
+Version=1.0
+Terminal=false
+Type=Application
+Name=BitChute
+Exec=mycroft-gui-app --hideTextInput --skill=bitchute-skill.aiix.home
+Icon=bitchute-skill
+Categories=VoiceApp
+StartupNotify=false
