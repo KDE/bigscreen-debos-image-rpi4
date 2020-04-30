@@ -1,0 +1,64 @@
+{{- $architecture := or .architecture "arm64" -}}
+{{- $firmware_version := or .firmware_version "master" -}}
+{{ $suite :=  or .suite "bionic" }}
+{{- $image := or .image "mycroft-mark2-rpi4.img" -}}
+
+architecture: {{ $architecture }}
+
+actions:
+  - action: run
+    description: Add ubuntu-x-swat ppa
+    chroot: true
+    command: add-apt-repository ppa:ubuntu-x-swat/updates -yn
+
+  - action: run
+    description: Set flash-kernel machine
+    chroot: true
+    command: mkdir /etc/flash-kernel && echo Raspberry Pi 4 Model B > /etc/flash-kernel/machine
+
+  - action: overlay
+    source: ../overlays/rpi4-config
+    destination: /boot/firmware
+
+# note that this is not normal apt action because we want this to be run inside chroot
+  - action: run
+    description: hack ischroot
+    chroot: true
+    command: mv /bin/mountpoint /var/tmp && ln -fs /bin/true /bin/mountpoint
+
+  - action: run
+    description: Add rpi4 specific packages
+    chroot: true
+    command: apt-get install -q -y flash-kernel linux-firmware-raspi2 linux-image-raspi2-hwe-18.04 u-boot-rpi
+
+  - action: run
+    description: hack ischroot
+    chroot: true
+    command: rm /bin/mountpoint && mv /var/tmp/mountpoint /bin/
+
+  - action: image-partition
+    imagename: {{ $image }}
+    imagesize: 8GB
+    partitiontype: msdos
+    mountpoints:
+      - mountpoint: /
+        partition: writable
+      - mountpoint: /boot/firmware
+        partition: system-boot
+        options: [ x-systemd.automount ]
+    partitions:
+      - name: system-boot
+        fs: fat32
+        start: 2048s
+        end: 526335s
+        flags: [boot]
+      - name: writable
+        fs: ext4
+        start: 526336s
+        end: 100%
+
+  - action: run
+    description: Set hostname
+    chroot: true
+    command: echo raspberrypi4 > /etc/hostname
+

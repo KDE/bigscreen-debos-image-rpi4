@@ -18,7 +18,6 @@ actions:
       - python3-websocket
       - cec-utils
       - libcec-dev
-      - raspi-userland
       - falkon
       - aura-browser
       - firefox
@@ -31,6 +30,7 @@ actions:
       - python3-dbus
       - python3-pyqt5
       - unclutter
+      #- raspi-userland
 
   - action: download
     url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
@@ -60,32 +60,32 @@ actions:
     description: Mycroft Big screen specific overlay
     source: ../overlays/bigscreen
     
-  - action: run
-    description: Setting up CEC
-    chroot: true
-    script: ../scripts/03-setup_cec.sh
-
-  - action: run
-    description: Setting up Skills
-    chroot: true
-    script: ../scripts/93-prepare-bigscreen-skills.sh
-
-  - action: download
-    url: https://mycroft.blue-systems.com/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
-    name: appimage-cli-tool
-    filename: appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
-    
-  - action: overlay
-    origin: appimage-cli-tool
-    source: .
-    destination: /var/tmp/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
-
-  - action: run
-    description: Setting up Appimage CLI Tool
-    chroot: true
-    script: ../scripts/95-prepare-appimage-cli-tool.sh
-
-  - action: run
-    description: Setting up AutoResolution Script
-    chroot: true
-    script: ../scripts/96-prepare-auto-resolution.sh
+#  - action: run
+#    description: Setting up CEC
+#    chroot: true
+#    script: ../scripts/03-setup_cec.sh
+#
+#  - action: run
+#    description: Setting up Skills
+#    chroot: true
+#    script: ../scripts/93-prepare-bigscreen-skills.sh
+#
+#  - action: download
+#    url: https://mycroft.blue-systems.com/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
+#    name: appimage-cli-tool
+#    filename: appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
+#    
+#  - action: overlay
+#    origin: appimage-cli-tool
+#    source: .
+#    destination: /var/tmp/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
+#
+#  - action: run
+#    description: Setting up Appimage CLI Tool
+#    chroot: true
+#    script: ../scripts/95-prepare-appimage-cli-tool.sh
+#
+#  - action: run
+#    description: Setting up AutoResolution Script
+#    chroot: true
+#    script: ../scripts/96-prepare-auto-resolution.sh

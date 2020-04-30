@@ -10,25 +10,25 @@ actions:
     description: Mycroft Mark 2 specific overlay
     source: ../overlays/mycroft
 
-  - action: download
-    url: https://mycroft.blue-systems.com/mycroft-core-setup-aarch64.tar.gz
-    name: mycroft-core
-    filename: mycroft-core-setup-aarch64.tar.gz
-
-  - action: overlay
-    origin: mycroft-core
-    source: .
-    destination: /var/tmp/mycroft-core-setup-aarch64.tar.gz
-
-  - action: download
-    url: http://frozenmazegames.se/mimic-arm64_1.2.0.2+1559651054-1.deb
-    name: mimic
-    filename: mimic-arm64_1.2.0.2+1559651054-1.deb
-
-  - action: overlay
-    origin: mimic
-    source: .
-    destination: /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
+#  - action: download
+#    url: https://mycroft.blue-systems.com/mycroft-core-setup-aarch64.tar.gz
+#    name: mycroft-core
+#    filename: mycroft-core-setup-aarch64.tar.gz
+#
+#  - action: overlay
+#    origin: mycroft-core
+#    source: .
+#    destination: /var/tmp/mycroft-core-setup-aarch64.tar.gz
+#
+#  - action: download
+#    url: http://frozenmazegames.se/mimic-arm64_1.2.0.2+1559651054-1.deb
+#    name: mimic
+#    filename: mimic-arm64_1.2.0.2+1559651054-1.deb
+#
+#  - action: overlay
+#    origin: mimic
+#    source: .
+#    destination: /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
 
   - action: apt
     description: Mycroft runtime dependencies
@@ -73,8 +73,8 @@ actions:
     chroot: true
     script: ../scripts/02-setup_mycroft_user.sh
 
-  - action: run
-    description: Install mycroft base software
-    chroot: true
-    script: ../scripts/92-clone-mycroft.sh
+#  - action: run
+#    description: Install mycroft base software
+#    chroot: true
+#    script: ../scripts/92-clone-mycroft.sh
 
