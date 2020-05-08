@@ -11,6 +11,10 @@ actions:
     packages:
       - breeze-icon-theme
       - humanity-icon-theme
+
+  - action: apt
+    description: Basic packages
+    packages:
       - bash-completion
       - vim
       - alsa-utils
