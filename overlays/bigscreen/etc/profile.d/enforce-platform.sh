@@ -1,0 +1,1 @@
+export PLASMA_PLATFORM=mediacenter
