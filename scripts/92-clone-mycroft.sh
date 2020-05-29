@@ -1,9 +1,9 @@
 UGID=32011
 USER=mycroft
 
-# Unpack mycroft-core-setup-aarch64.tar.gz to user home
-tar -xzf /var/tmp/mycroft-core-setup-aarch64.tar.gz -C /home/$USER/
-rm /var/tmp/mycroft-core-setup-aarch64.tar.gz
+# Unpack mycroft-core-setup-arm.tar.gz to user home
+tar -xzf /var/tmp/mycroft-core-setup-arm.tar.gz -C /home/$USER/
+rm /var/tmp/mycroft-core-setup-arm.tar.gz
 
 mkdir -p /opt/mycroft/skills
 mkdir -p /var/log/mycroft
@@ -20,4 +20,5 @@ chown -R $UGID:$UGID /var/log/mycroft
 
 
 # Install mimic
-dpkg --install /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
+# from https://github.com/forslund/mycroft-desktop-repo/raw/gh-pages/pool/main/m/mimic/mimic_1.3.0.1_armhf.deb
+dpkg --install /var/tmp/mimic_1.3.0.1_armhf.deb
