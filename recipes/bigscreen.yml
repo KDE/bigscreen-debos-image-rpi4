@@ -33,24 +33,24 @@ actions:
       #- raspi-userland
 
   - action: download
-    url: https://mycroft.blue-systems.com/mycroft-skills-aarch64.tar.gz
+    url: https://mycroft.blue-systems.com/mycroft-skills-{{ $architecture }}.tar.gz
     name: mycroft-skills
-    filename: mycroft-skills-aarch64.tar.gz
+    filename: mycroft-skills-{{ $architecture }}.tar.gz
 
   - action: overlay
     origin: mycroft-skills
     source: .
-    destination: /var/tmp/mycroft-skills-aarch64.tar.gz
+    destination: /var/tmp/mycroft-skills-{{ $architecture }}.tar.gz
 
   - action: download
-    url: https://mycroft.blue-systems.com/dotmycroft-setup-aarch64.tar.gz
+    url: https://mycroft.blue-systems.com/dotmycroft-setup-{{ $architecture }}.tar.gz
     name: dotmycroft
-    filename: dotmycroft-setup-aarch64.tar.gz
+    filename: dotmycroft-setup-{{ $architecture }}.tar.gz
 
   - action: overlay
     origin: dotmycroft
     source: .
-    destination: /var/tmp/dotmycroft-setup-aarch64.tar.gz
+    destination: /var/tmp/dotmycroft-setup-{{ $architecture }}.tar.gz
 
   - action: overlay
     description: Plasma for embedded systems specific overlay
@@ -65,10 +65,10 @@ actions:
 #    chroot: true
 #    script: ../scripts/03-setup_cec.sh
 #
-#  - action: run
-#    description: Setting up Skills
-#    chroot: true
-#    script: ../scripts/93-prepare-bigscreen-skills.sh
+  - action: run
+    description: Setting up Skills
+    chroot: true
+    script: ../scripts/93-prepare-bigscreen-skills.sh {{ $architecture }}
 #
 #  - action: download
 #    url: https://mycroft.blue-systems.com/appimage_cli_tool_0_1_6_ubuntu_bionic-arm64.deb
