@@ -19,7 +19,8 @@ chown -R $UGID:$UGID /opt/mycroft
 chown -R $UGID:$UGID /var/log/mycroft
 
 
-if [ $1 == "armhf" ]; then
+# Install mimic
+if [ $1 = "armhf" ]; then
     dpkg --install /var/tmp/mimic_1.3.0.1_armhf.deb
 else
     dpkg --install /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
