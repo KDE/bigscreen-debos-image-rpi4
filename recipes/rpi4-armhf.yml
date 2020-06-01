@@ -6,6 +6,14 @@
 architecture: {{ $architecture }}
 
 actions:
+  - action: download
+    description: Fetch latest kernel ci build
+    url: https://bshah.in/linux-pi4-armhf.zip
+    name: kernel
+    filename: kernel.zip
+    unpack: true
+    compression: zip
+
   - action: run
     description: Add ubuntu-x-swat ppa
     chroot: true
@@ -18,23 +26,35 @@ actions:
 
   - action: overlay
     source: ../overlays/rpi4-config
-    destination: /boot/firmware
+    destination: /
+
+  - action: overlay
+    origin: kernel
+    source: .
+    destination: /var/tmp/
 
 # note that this is not normal apt action because we want this to be run inside chroot
   - action: run
     description: hack ischroot
     chroot: true
-    command: mv /bin/mountpoint /var/tmp && ln -fs /bin/true /bin/mountpoint
+    command: mv /bin/mountpoint /home && ln -fs /bin/true /bin/mountpoint
+
+  - action: run
+    origin: kernel
+    chroot: true
+    description: Install kernel
+    label: dpkg
+    command: dpkg -i /var/tmp/*.deb && rm /var/tmp/* -r
 
   - action: run
     description: Add rpi4 specific packages
     chroot: true
-    command: apt-get install -q -y flash-kernel linux-firmware-raspi2 linux-image-raspi2-hwe-18.04 u-boot-rpi
+    command: apt-get install -q -y flash-kernel u-boot-rpi
 
   - action: run
-    description: hack ischroot
+    description: unhack ischroot
     chroot: true
-    command: rm /bin/mountpoint && mv /var/tmp/mountpoint /bin/
+    command: rm /bin/mountpoint && mv /home/mountpoint /bin/
 
   - action: image-partition
     imagename: {{ $image }}
