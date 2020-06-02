@@ -49,6 +49,11 @@ actions:
   - action: run
     description: Add rpi4 specific packages
     chroot: true
+    command: update-initramfs -u -v
+
+  - action: run
+    description: Add rpi4 specific packages
+    chroot: true
     command: apt-get install -q -y flash-kernel linux-firmware-raspi2 u-boot-rpi
 
   - action: run
