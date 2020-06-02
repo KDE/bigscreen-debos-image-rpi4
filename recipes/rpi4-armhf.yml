@@ -40,6 +40,11 @@ actions:
     command: mv /bin/mountpoint /home && ln -fs /bin/true /bin/mountpoint
 
   - action: run
+    description: Add rpi4 specific packages
+    chroot: true
+    command: apt-get install -q -y initramfs-tools
+
+  - action: run
     origin: kernel
     chroot: true
     description: Install kernel
