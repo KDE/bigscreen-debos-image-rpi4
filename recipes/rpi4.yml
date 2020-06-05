@@ -13,7 +13,7 @@ actions:
     url: https://bshah.in/linux-pi4.zip
 {{ else }}
     url: https://bshah.in/linux-pi4-armhf.zip
-{{ endif }}
+{{ end }}
     name: kernel
     filename: kernel.zip
     unpack: true
