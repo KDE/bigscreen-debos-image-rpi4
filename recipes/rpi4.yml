@@ -9,7 +9,11 @@ actions:
     # Hardware specific parts
   - action: download
     description: Fetch latest kernel ci build
+{{ if eq $architecture "armhf" }}
     url: https://bshah.in/linux-pi4.zip
+{{ else }}
+    url: https://bshah.in/linux-pi4-armhf.zip
+{{ endif }}
     name: kernel
     filename: kernel.zip
     unpack: true
