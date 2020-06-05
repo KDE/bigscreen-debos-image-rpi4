@@ -21,28 +21,19 @@ actions:
     destination: /var/tmp/mycroft-core-setup-{{ $architecture }}.tar.gz
 
 # If arch is armhf use mimic-armhf or use mimic-arm64
+  - action: download
 {{ if eq $architecture "armhf" }}
-  - action: download
-    url: http://frozenmazegames.se/mimic-arm64_1.2.0.2+1559651054-1.deb
-    name: mimic
-    filename: mimic-arm64_1.2.0.2+1559651054-1.deb
-
-  - action: overlay
-    origin: mimic
-    source: .
-    destination: /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
-
+    url: https://github.com/forslund/mycroft-desktop-repo/raw/gh-pages/pool/main/m/mimic/mimic_1.3.0.1_armhf.deb
 {{ else }}
-  - action: download
     url: http://frozenmazegames.se/mimic-arm64_1.2.0.2+1559651054-1.deb
+{{end}}
     name: mimic
-    filename: mimic-arm64_1.2.0.2+1559651054-1.deb
+    filename: mimic.deb
 
   - action: overlay
     origin: mimic
     source: .
-    destination: /var/tmp/mimic-arm64_1.2.0.2+1559651054-1.deb
-{{end}}
+    destination: /var/tmp/mimic.deb
 
   - action: apt
     description: Mycroft runtime dependencies
