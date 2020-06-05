@@ -18,7 +18,7 @@ actions:
       - python3-websocket
       - cec-utils
       - libcec-dev
-      - raspi-userland
+      #- raspi-userland
       - falkon
       - aura-browser
       - firefox
