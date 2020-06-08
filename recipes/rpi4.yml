@@ -1,5 +1,5 @@
 {{- $architecture := or .architecture "arm64" -}}
-{{- $firmware_version := or .firmware_version "master" -}}
+{{- $firmware_version := or .firmware_version "stable" -}}
 {{ $suite :=  or .suite "bionic" }}
 {{- $image := or .image "mycroft-mark2-rpi4.img" -}}
 
