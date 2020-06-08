@@ -70,7 +70,11 @@ actions:
     command: mkdir -p /boot/firmware/overlays && cp -v /usr/lib/linux-image-*/**/*.dtb /boot/firmware && cp -v /usr/lib/linux-image-*/overlays/* /boot/firmware/overlays/
 
   - action: overlay
+{{ if eq $architecture "armhf" }}
+    source: ../overlays/rpi4-config-armhf
+{{ else }}
     source: ../overlays/rpi4-config
+{{ end }}
     destination: /boot/firmware
 
   - action: overlay
