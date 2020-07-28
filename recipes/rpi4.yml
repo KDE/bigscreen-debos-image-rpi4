@@ -12,7 +12,7 @@ actions:
 {{ if eq $architecture "armhf" }}
     url: https://bshah.in/linux-pi4-armhf.zip
 {{ else }}
-    url: https://bshah.in/linux-pi4.zip
+    url: https://bshah.in/linux-pi4-5.4-arm64.zip
 {{ end }}
     name: kernel
     filename: kernel.zip
