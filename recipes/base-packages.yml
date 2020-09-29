@@ -58,7 +58,7 @@ actions:
       - gstreamer1.0-plugins-good
       - gstreamer1.0-plugins-bad
       - gstreamer1.0-plugins-ugly
-      - gstreamer1.0-fluendo-mp3
+#      - gstreamer1.0-fluendo-mp3
       - gstreamer1.0-libav
       - gstreamer1.0-alsa
       - gstreamer1.0-gl
@@ -75,6 +75,5 @@ actions:
       - chromium-codecs-ffmpeg-extra
       - libk3b7-extracodecs
       - libavcodec-extra
-      - libavcodec-extra57
       - ubuntu-restricted-extras
       - kubuntu-restricted-extras

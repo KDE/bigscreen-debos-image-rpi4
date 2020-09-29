@@ -14,7 +14,7 @@ actions:
   - action: run
     description: Add xenon apt repo
     chroot: true
-    command: echo "deb http://archive.xenon.pangea.pub/unstable bionic main" > /etc/apt/sources.list.d/xenon.list
+    command: echo "deb http://archive.xenon.pangea.pub/unstable {{ $suite }} main" > /etc/apt/sources.list.d/xenon.list
 
   - action: run
     description: Pin xenon repo

@@ -14,5 +14,5 @@ actions:
   - action: run
     description: Add neon apt repo
     chroot: true
-    command: echo "deb https://archive.neon.kde.org/unstable bionic main" > /etc/apt/sources.list.d/neon.list
+    command: echo "deb https://archive.neon.kde.org/unstable {{ $suite }} main" > /etc/apt/sources.list.d/neon.list
 
