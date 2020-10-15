@@ -139,3 +139,8 @@ actions:
     description: Setting up Bluetooth Script
     chroot: true
     script: ../scripts/98-prepare-bluetooth-firmware.sh
+
+  - action: run
+    description: Setting up Pulse Default File
+    chroot: true
+    script: ../scripts/99-prepare-pulsedefault.sh
