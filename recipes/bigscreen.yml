@@ -31,6 +31,11 @@ actions:
       - python3-dbus
       - python3-pyqt5
       - unclutter
+      - libpolkit-qt5-1-1
+      - libpolkit-agent-1-0
+      - polkit-kde-1
+      - polkit-kde-agent-1
+      - libpolkit-qt5-1-1
 
   - action: apt
     description: Bluetooth Enablement
