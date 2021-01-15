@@ -3,6 +3,7 @@
 import cec
 import uinput
 import time
+import psutil
 
 u = uinput
 
@@ -33,25 +34,38 @@ device = uinput.Device(KEYMAP.values())
 
 print("Ready")
 keystate = None
+override = False
+
+def check_override():
+    global override
+    if "kodi-x11" in (p.name() for p in psutil.process_iter()):
+        override = True
+    else:
+        override = False
 
 def onkey(event, key, state):
     assert event == 2
     global keystate
+    global override
+    check_override()
     if state == 0 and keystate is None:
         print("Got Key", key, "state", state)
         keystate = "down"
-        device.emit(KEYMAP[key], 1)
+        if not override:
+            device.emit(KEYMAP[key], 1)
 
     if state > 0:
         if keystate is None:
            print("Got key", key, "state", state)
-           device.emit(KEYMAP[key], 1)
+           if not override:
+               device.emit(KEYMAP[key], 1)
 
         print("Key {0} up after {1}".format(key, state))
-        device.emit(KEYMAP[key], 0)
-        keystate = None
+        if not override:
+            device.emit(KEYMAP[key], 0)
+            keystate = None
 
 cec.add_callback(onkey, cec.EVENT_KEYPRESS)
 
 while True:
- time.sleep(9e9)
+    time.sleep(9e9)
