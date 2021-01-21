@@ -30,6 +30,7 @@ actions:
       - dolphin
       - python3-dbus
       - python3-pyqt5
+      - python3-psutil
       - unclutter
       - libpolkit-qt5-1-1
       - libpolkit-agent-1-0
