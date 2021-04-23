@@ -65,6 +65,7 @@ actions:
       - pulseaudio-utils
       - libdbus-1-dev
       - libdbus-glib-1-dev
+      - sox
 
     # Mycroft packages
   - action: apt
