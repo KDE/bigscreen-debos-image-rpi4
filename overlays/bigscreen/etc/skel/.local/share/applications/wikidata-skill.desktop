@@ -1,13 +1,10 @@
 [Desktop Entry]
 Categories=VoiceApp
-Comment[en_IN]=
 Comment=
 Exec=mycroft-gui-app --hideTextInput --skill=skill-wikidata.aiix.home
-GenericName[en_IN]=
 GenericName=
 Icon=wikidata-skill
 MimeType=
-Name[en_IN]=Wikidata
 Name=Wikidata
 Path=
 StartupNotify=false
