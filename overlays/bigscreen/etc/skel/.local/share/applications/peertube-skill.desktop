@@ -5,6 +5,12 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=PeerTube
+Name[ca]=PeerTube
+Name[es]=PeerTube
+Name[eu]=PeerTube
+Name[nl]=PeerTube
+Name[uk]=PeerTube
+Name[x-test]=xxPeerTubexx
 Exec=mycroft-gui-app --hideTextInput --skill=peertube-skill.aiix.home
 Icon=peertube-skill
 Categories=VoiceApp
