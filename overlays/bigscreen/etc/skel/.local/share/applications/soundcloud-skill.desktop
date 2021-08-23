@@ -18,6 +18,7 @@ Name[sl]=Soundcloud
 Name[sv]=Soundcloud
 Name[uk]=Soundcloud
 Name[x-test]=xxSoundcloudxx
+Name[zh_CN]=Soundcloud
 Path=
 StartupNotify=false
 Terminal=false
