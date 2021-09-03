@@ -19,7 +19,7 @@ class AutoResolution():
         self.supportedDisplayModeList.clear()
         #self.check_if_target_reached() - does not currently work
         self.get_x_supported_modes()
-        
+
     def check_if_target_reached(self):
         logFile = open('/tmp/resolutionTarget.txt', 'a')
         try:
@@ -68,7 +68,7 @@ class AutoResolution():
         else:
             print("found x", file=logFile2)
             self.get_x_supported_modes()
-        
+
     def get_session_type_dbus(self):
         # Requires watch on dbus-org.freedesktop.login1 service
         bus = dbus.SystemBus()
@@ -83,7 +83,7 @@ class AutoResolution():
         else:
             print("found x", file=logFile2)
             self.get_x_supported_modes()
-            
+
     def get_x_supported_modes(self):
         bus = QtDBus.QDBusConnection.sessionBus()
         kscreenObject = QtDBus.QDBusInterface(self.item, self.path, self.interface, bus)
@@ -130,5 +130,8 @@ class AutoResolution():
            setDisplayId = int(displayId)
            setDisplayArgs = "output.{0}.mode.{1}".format(setDisplayId, setDisplayMode)
            setDisplayConfig = subprocess.call(["kscreen-doctor", setDisplayArgs])
+           bus = dbus.SessionBus()
+           remote_object = bus.get_object("org.kde.bigscreen", "/Plugin")
+           remote_object.autoResolutionChanged(dbus_interface = "org.kde.bigscreen")
 
 autoResolution = AutoResolution()
