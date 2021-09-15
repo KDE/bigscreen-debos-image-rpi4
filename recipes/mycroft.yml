@@ -73,6 +73,7 @@ actions:
     packages:
       - mycroft-gui
       - qml-module-org-kde-lottie
+      - qml-module-qtquick-shapes
 
   - action: run
     description: Set up user account
