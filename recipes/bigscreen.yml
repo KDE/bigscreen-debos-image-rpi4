@@ -37,6 +37,7 @@ actions:
       - polkit-kde-1
       - polkit-kde-agent-1
       - libpolkit-qt5-1-1
+      - plank-player
 
   - action: apt
     description: Bluetooth Enablement
