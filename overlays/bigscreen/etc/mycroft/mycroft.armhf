@@ -1,0 +1,23 @@
+{
+  "enclosure": {
+    "platform": "kde",
+    "platform_build": 1
+  },
+  "tts": {
+    "module": "mimic2",
+    "mimic2": {
+      "lang": "en-us",
+      "url": "https://mimic-api.mycroft.ai/synthesize?text=",
+      "preloaded_cache": "/opt/mycroft/preloaded_cache/Mimic2"
+    },
+    "pulse_duck": true
+  },
+  "ipc_path": "/ramdisk/mycroft/ipc/",
+  "skills": {
+     "priority_skills": ["mycroft-pairing", "mycroft-volume", "skill-bigscreen-platform.aiix"]
+  },
+  "listener": {
+    "recording_timeout": 10.0,
+    "recording_timeout_with_silence": 10.0
+  }
+}

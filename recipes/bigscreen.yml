@@ -151,3 +151,12 @@ actions:
     description: Setting up Pulse Default File
     chroot: true
     script: ../scripts/99-prepare-pulsedefault.sh
+    
+  - action: run
+    description: Setting up Mycroft Config
+    chroot: true
+    {{ if eq $architecture "armhf" }}
+    script: ../scripts/100-mycroft-conf-armhf.sh
+    {{ else }}
+    script: ../scripts/100-mycroft-conf-arm64.sh
+    {{end}}
