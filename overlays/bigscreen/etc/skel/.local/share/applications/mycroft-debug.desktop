@@ -3,6 +3,7 @@ Categories=Utilities
 Exec=konsole --workdir "/home/$USER/mycroft-core" --hold -e "bash start-mycroft.sh cli"
 Icon=debug-run
 Name=Mycroft Console
+Name[ar]=طرفية ميكروفت
 Name[ca]=Consola del Mycroft
 Name[ca@valencia]=Consola de Mycroft
 Name[cs]=Konzole pro Mycroft

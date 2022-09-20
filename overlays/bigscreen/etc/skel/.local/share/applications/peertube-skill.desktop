@@ -5,6 +5,7 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=PeerTube
+Name[ar]=بيير تيوب
 Name[ca]=PeerTube
 Name[ca@valencia]=PeerTube
 Name[cs]=PeerTube
