@@ -34,6 +34,7 @@ Name[sl]=Mycroft Console
 Name[sv]=Mycroft-terminal
 Name[tr]=Mycroft Konsol
 Name[uk]=Консоль Mycroft
+Name[x-test]=xxMycroft Consolexx
 Name[zh_CN]=Mycroft 控制台
 Terminal=false
 Type=Application
