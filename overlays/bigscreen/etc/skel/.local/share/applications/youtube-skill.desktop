@@ -37,7 +37,6 @@ Name[sl]=Youtube
 Name[sv]=Youtube
 Name[tr]=YouTube
 Name[uk]=Youtube
-Name[x-test]=xxYoutubexx
 Name[zh_CN]=Youtube
 Name[zh_TW]=Youtube
 Exec=mycroft-gui-app --hideTextInput --skill=youtube-skill.aiix.home
